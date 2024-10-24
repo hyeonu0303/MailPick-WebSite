@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/Button"
-import { ArrowRight, Mail, Calendar, Search } from "lucide-react"
+import { ArrowRight, Mail, Calendar, Search, Check } from "lucide-react"
 
 const Home = ()=> {
   return (
@@ -83,6 +83,109 @@ const Home = ()=> {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section className="container mx-auto px-4 py-20 bg-gray-50">
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">플랜 및 가격</h2>
+  <p className="text-center text-blue-600 hover:text-blue-700 mb-12">
+    <a href="#" className="flex items-center justify-center gap-1">
+      구독 및 지불 정책 자세히 알아보기 
+      <span className="text-lg">›</span>
+    </a>
+  </p>
+
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {/* Basic Plan */}
+    <div className="bg-white rounded-lg shadow-lg p-8 relative">
+      <h3 className="text-2xl font-bold mb-4">Basic</h3>
+      <div className="flex items-end gap-1 mb-6">
+        <span className="text-3xl font-bold text-gray-400 line-through">₩0</span>
+        <span className="text-gray-600">/월</span>
+      </div>
+      <ul className="space-y-4 mb-8">
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>계정 추가 무제한</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>캘린더, 기본 메일 서비스</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>2GB 용량제공</span>
+        </li>
+      </ul>
+      <Button variant="outline" size="lg" className="w-full">시작하기</Button>
+    </div>
+
+    {/* Standard Plan */}
+    <div className="bg-white rounded-lg shadow-lg p-8 relative">
+      <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+        <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Popular</span>
+      </div>
+      <h3 className="text-2xl font-bold mb-4">Standard</h3>
+      <div className="flex items-end gap-1 mb-6">
+        <span className="text-3xl font-bold">₩9,900</span>
+        <span className="text-gray-600">/월</span>
+      </div>
+      <ul className="space-y-4 mb-8">
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>계정 추가 무제한</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>20GB 용량제공</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>AI 메일 요약 및 자동일정추가</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>대용량 첨부파일 지원</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>마감 프로모션 자동알림</span>
+        </li>
+      </ul>
+      <Button size="lg" className="w-full">시작하기</Button>
+    </div>
+
+    {/* Pro Plan */}
+    <div className="bg-white rounded-lg shadow-lg p-8 relative">
+      <h3 className="text-2xl font-bold mb-4">Pro</h3>
+      <div className="flex items-end gap-1 mb-6">
+        <span className="text-3xl font-bold">₩12,900</span>
+        <span className="text-gray-600">/월</span>
+      </div>
+      <ul className="space-y-4 mb-8">
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>계정 추가 무제한</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>50GB 용량제공</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>AI 메일 요약 및 자동일정추가</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>대용량 첨부파일 지원</span>
+        </li>
+        <li className="flex items-center gap-2">
+          <Check className="h-5 w-5 text-blue-600" />
+          <span>마감 프로모션 자동알림</span>
+        </li>
+      </ul>
+      <Button variant="outline" size="lg" className="w-full">시작하기</Button>
     </div>
   </div>
 </section>
